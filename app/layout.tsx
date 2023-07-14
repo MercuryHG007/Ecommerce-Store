@@ -1,12 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
- 
-// Font files can be colocated inside of `app`
+import { Raleway } from 'next/font/google'
 // const font = localFont({
 //   src: './Recoleta.otf',
 // })
-import { Raleway } from 'next/font/google'
+
+import Navbar from '@/components/navbar'
+import Footer from '@/components/footer'
+
 const font = Raleway({ 
   subsets: ['latin'],
   weight: '400' 
@@ -24,7 +26,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
