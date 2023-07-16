@@ -40,7 +40,7 @@ const Gallery: React.FC<GalleryProps> = ({
                         key={image.id}
                     >
                         <div
-                            className='aspect-square relative h-full w-full sm:rounded-lg overflow-hidden drop-shadow-xl border'
+                            className='aspect-square relative h-full w-full sm:rounded-lg overflow-hidden drop-shadow-xl shadow-xl '
                         >
                             <Image
                                 fill

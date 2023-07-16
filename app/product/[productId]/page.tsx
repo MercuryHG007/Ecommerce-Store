@@ -3,14 +3,15 @@ import getProducts from "@/actions/get-products"
 import Gallery from "@/components/gallery"
 import ProductList from "@/components/product-list"
 import Container from "@/components/ui/container"
+import Info from "@/components/info"
 
-interface ProductPageProps{
+interface ProductPageProps {
     params: {
         productId: string
     }
 }
 
-const ProductPage:React.FC<ProductPageProps> = async({
+const ProductPage: React.FC<ProductPageProps> = async ({
     params
 }) => {
 
@@ -36,7 +37,9 @@ const ProductPage:React.FC<ProductPageProps> = async({
                         <div
                             className="mt-10 px-4 sm:mt-16 sm:px-8 lg:mt-0 "
                         >
-                            <div>INFO</div>
+                            <Info
+                                product={product}
+                            />
                         </div>
                     </div>
                     <hr
