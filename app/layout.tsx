@@ -9,11 +9,12 @@ import { Raleway } from 'next/font/google'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import ModalProvider from '@/providers/modal-provider'
+import ToastProvider from '@/providers/toast-provider'
 
-const font = Raleway({ 
+const font = Raleway({
   subsets: ['latin'],
-  weight: '400' 
-})  
+  weight: '400'
+})
 
 export const metadata: Metadata = {
   title: 'Mercury Store',
@@ -29,6 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ModalProvider />
+        <ToastProvider />
         <Navbar />
         {children}
         <Footer />
